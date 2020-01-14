@@ -106,7 +106,7 @@ int main(void)
 }
 
 
-// Write to USB CDC
+// Write to USB CDC, reading should be similar
 void cdc_print (usb_dev *pudev, uint8_t *str, uint32_t data_len)
 {
     packet_sent = 0;
