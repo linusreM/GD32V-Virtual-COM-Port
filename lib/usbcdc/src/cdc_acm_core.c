@@ -74,7 +74,7 @@ const usb_desc_dev device_descriptor =
          .bDescriptorType = USB_DESCTYPE_DEV
      },
     .bcdUSB = 0x0200,
-    .bDeviceClass = 0x02,
+    .bDeviceClass = 0x02,  // Communications and CDC Control
     .bDeviceSubClass = 0x00,
     .bDeviceProtocol = 0x00,
     .bMaxPacketSize0 = USB_FS_EP0_MAX_LEN,
@@ -115,9 +115,9 @@ usb_descriptor_configuration_set_struct configuration_descriptor =
         .bInterfaceNumber = 0x00,
         .bAlternateSetting = 0x00,
         .bNumEndpoints = 0x01,
-        .bInterfaceClass = 0x02,
-        .bInterfaceSubClass = 0x02,
-        .bInterfaceProtocol = 0x01,
+        .bInterfaceClass = 0x02,     // Communications Interface Class
+        .bInterfaceSubClass = 0x02,  // Abstract Control Model
+        .bInterfaceProtocol = 0x00,  // No class specific protocol required
         .iInterface = 0x00
     },
 
@@ -190,9 +190,9 @@ usb_descriptor_configuration_set_struct configuration_descriptor =
         .bInterfaceNumber = 0x01,
         .bAlternateSetting = 0x00,
         .bNumEndpoints = 0x02,
-        .bInterfaceClass = 0x0A,
-        .bInterfaceSubClass = 0x00,
-        .bInterfaceProtocol = 0x00,
+        .bInterfaceClass = 0x0A,     // Data Interface Class
+        .bInterfaceSubClass = 0x00,  // unused
+        .bInterfaceProtocol = 0x00,  // No class specific protocol required
         .iInterface = 0x00
     },
 
