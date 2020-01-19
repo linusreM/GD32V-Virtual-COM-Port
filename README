@@ -1,9 +1,0 @@
-Test for GD32VF103 USB CDC (virtual COM port).
-
-Just dumped the usb driver into the project source/include directories. Then used the CDC_ACM demo project as the base for the project ( https://github.com/riscv-mcu/GD32VF103_Demohttps://github.com/riscv-mcu/GD32VF103_Demo_Suites/tree/master/GD32VF103C_START_Demo_Suites/Projects/04_USBFS/Device/CDC_ACM )
-
-There was also a missing include in cdc_usb_core.c which I added.
-
-Then added a function to write strings to the com port, since the loopback wasn't very useful in how it was implemented.
-
-Seems to compile fine, and I get a stable port showing up with read and write. Only tested on linux so far though.
